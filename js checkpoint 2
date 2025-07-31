@@ -1,0 +1,105 @@
+1. Reverse a string
+
+function reverseWord(word) {
+  return word.split('').reverse().join('');
+}
+
+// Example:
+console.log(reverseWord("hello")); // Output: "olleh"
+2.Count Characters
+javascript
+Copy code
+function countLetters(text) {
+  return text.length;
+}
+
+// Example:
+console.log(countLetters("coding")); // Output: 6
+
+
+3. Capitalizing each word
+
+function capitalizeSentence(sentence) {
+  return sentence.split(' ').map(function(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }).join(' ');
+}
+
+// Example:
+console.log(capitalizeSentence("My Name Is Liz"));
+// Output: "I Love Javascript"
+
+4. Find biggest and smallest numbers
+
+function biggestNumber(numbers) {
+  return Math.max(...numbers);
+}
+
+function smallestNumber(numbers) {
+  return Math.min(...numbers);
+}
+
+// Example:
+let myMarks = [65, 78, 90, 45];
+console.log(biggestNumber(myMarks));  // Output: 90
+console.log(smallestNumber(myMarks)); // Output: 45
+
+5. Sum all numbers in array
+
+function totalMarks(marks) {
+  return marks.reduce(function(sum, number) {
+    return sum + number;
+  }, 0);
+}
+
+// Example:
+console.log(totalMarks([10, 20, 30])); // Output: 60
+
+6.  Filter array ( keep numbers bigger than 50)
+
+function filterBigNumbers(arr) {
+  return arr.filter(function(num) {
+    return num > 50;
+  });
+}
+
+// Example:
+console.log(filterBigNumbers([30, 60, 90, 20])); // Output: [60, 90]
+
+
+7.  Factorial ( 5! = 5×4×3×2×1)
+
+function findFactorial(n) {
+  if (n === 0 || n === 1) return 1;
+  return n * findFactorial(n - 1);
+}
+
+// Example:
+console.log(findFactorial(4)); // Output: 24
+
+
+8. Check if a number is prime
+
+function isItPrime(n) {
+  if (n <= 1) return false;
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) return false;
+  }
+  return true;
+}
+
+// Example:
+console.log(isItPrime(7)); // Output: true
+console.log(isItPrime(8)); // Output: false
+
+9.Fibonacci sequence
+function showFibonacci(terms) {
+  let fib = [0, 1];
+  for (let i = 2; i < terms; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+  return fib.slice(0, terms);
+}
+
+// Example:
+console.log(showFibonacci(6)); // Output: [0, 1, 1, 2, 3, 5]
